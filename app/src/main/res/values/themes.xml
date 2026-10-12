@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- La UI real se dibuja con Compose (tv-material3); el tema solo
+         define la ventana base oscura para TV. -->
+    <style name="Theme.DriveTV" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

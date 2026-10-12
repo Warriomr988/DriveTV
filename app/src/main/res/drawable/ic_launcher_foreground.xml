@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Pantalla del TV -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M29,30 L79,30 A7,7 0 0 1 86,37 L86,57 A7,7 0 0 1 79,64 L29,64 A7,7 0 0 1 22,57 L22,37 A7,7 0 0 1 29,30 Z" />
+
+    <!-- Base del TV -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"
+        android:pathData="M54,64 L54,72 M44,72 L64,72" />
+
+    <!-- Botón play (verde Drive) -->
+    <path
+        android:fillColor="#34A853"
+        android:pathData="M47,40 L47,58 L63,49 Z" />
+</vector>

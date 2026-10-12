@@ -1,0 +1,8 @@
+# Nunca subir credenciales al repo
+local.properties
+*.jks
+*.keystore
+/build
+/app/build
+/.gradle
+.DS_Store

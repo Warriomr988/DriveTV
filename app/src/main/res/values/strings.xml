@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DriveTV</string>
+    <string name="signin_title">Iniciar sesión con Google</string>
+    <string name="signin_subtitle">DriveTV necesita acceso de lectura a tu Google Drive para mostrar y reproducir tus vídeos.</string>
+    <string name="signin_google_button">Continuar con Google</string>
+    <string name="signin_manual_hint">…o pega un token de acceso (modo prueba)</string>
+    <string name="signin_manual_placeholder">ya29.… (token de OAuth Playground)</string>
+    <string name="signin_manual_button">Usar este token</string>
+    <string name="files_title">Mi unidad</string>
+    <string name="player_resume">Reanudando donde lo dejaste…</string>
+    <string name="error_no_connection">No hay conexión. Comprueba la red e intenta nuevamente.</string>
+    <string name="error_session_expired">La sesión de Google expiró. Inicia sesión nuevamente.</string>
+    <string name="error_forbidden">No tienes permiso para reproducir este archivo.</string>
+    <string name="error_not_found">El archivo ya no está disponible en Drive.</string>
+    <string name="error_codec">Este dispositivo no puede reproducir este formato con el reproductor actual.</string>
+    <string name="error_buffering">Cargando vídeo…</string>
+    <string name="settings_signout">Cerrar sesión</string>
+    <string name="settings_clear_resume">Borrar historial de reanudación</string>
+</resources>

@@ -1,0 +1,45 @@
+name: Compilar DriveTV
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Configurar JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Configurar Gradle 8.13
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: 8.13
+
+      - name: Instalar SDK 34
+        run: |
+          yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "platforms;android-34" "build-tools;34.0.0" 2>&1 | tail -2
+
+      - name: Quitar línea solo-Termux
+        run: sed -i '/aapt2FromMavenOverride/d' gradle.properties
+
+      - name: Compilar APK debug
+        env:
+          # Opcional: si defines el secreto DRIVETV_WEB_CLIENT_ID en el repo,
+          # el botón "Continuar con Google" funciona igual que en Termux.
+          DRIVETV_WEB_CLIENT_ID: ${{ secrets.DRIVETV_WEB_CLIENT_ID }}
+        run: gradle assembleDebug --no-daemon --continue
+
+      - name: Subir APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: DriveTV-debug
+          path: app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 30

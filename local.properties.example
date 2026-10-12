@@ -1,0 +1,5 @@
+# Ejemplo — copiar a local.properties (NO subir al repo).
+# Es el "Web client ID" (tipo Web) de tu proyecto en Google Cloud Console.
+# Se usa solo para requestIdToken(); sin él, el login de Google igual
+# funciona y el token de acceso se obtiene con GoogleAuthUtil.
+drivetv.webClientId=TU_WEB_CLIENT_ID_DE_GOOGLE_CLOUD
